@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Acres Farm Sanctuary</title>
+    <style>
+      ul {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        text-align: center;
+        list-style: none;
+      }
+      li {
+        display: inline;
+        margin: 0 65px;
+      }
+      a {
+        text-decoration: none;
+      }
+      h1 {
+        text-align: center;
+        color: #3a9188;
+        border: 2px solid #307470;
+        border-radius: 4px;
+        padding: 20px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #d70041;
+        text-shadow: 2px 2px 8px white;
+        letter-spacing: 3px;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 auto;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 600px;
+        border-radius: 10px;
+      }
+      p {
+        color: #062925;
+        line-height: 1.5;
+        font-size: 14px;
+        margin: 20px 0 10px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #9ae17b;
+        color: white;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 250ms ease-in-out;
+      }
+      button:hover {
+        color: #9ae17b;
+        background: white;
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        background: linear-gradient(
+          109.6deg,
+          rgb(251, 250, 225) 11.2%,
+          rgb(206, 240, 185) 47.5%,
+          rgb(100, 163, 111) 100.2%
+        );
+      }
+      .sanctuary {
+        font-size: 22px;
+        color: #062925;
+        font-weight: 100;
+      }
+      .learn-more {
+        color: #307470;
+        font-size: 12px;
+        text-decoration: none;
+      }
+      .learn-more:hover {
+        text-decoration: none;
+      }
+      .footer {
+        text-align: center;
+        font-size: 11px;
+        display: block;
+      }
+      .name {
+        color: rgb(100, 163, 111);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="donate">
+          <a
+            href="https://greenacresfarmsanctuary.org/ways-to-help"
+            target="_blank"
+            style="color: #062925"
+          >
+            Donate
+          </a>
+        </li>
+        <li class="calendar">
+          <a
+            href="https://greenacresfarmsanctuary.org/calendar"
+            target="_blank"
+            style="color: #044a42"
+          >
+            Volunteer
+          </a>
+        </li>
+        <li class="shop">
+          <a
+            href="https://greenacresfarmsanctuary.org/store"
+            target="_blank"
+            style="color: #3a9188"
+          >
+            Shop
+          </a>
+        </li>
+      </ul>
+      <h1>
+        Green Acres Farm Sanctuary <br />
+        <span class="sanctuary"
+          >Nonprofit organization with multiple programs to help farm
+          animals</span
+        >
+      </h1>
+      <h2>
+        <hr />
+        Meet Dahlia:
+        <br />
+        She has permanent brain damage and will require bottle feedings for the
+        rest of her life. Green Acres rescued Dahlia and gives her extra love
+        and attention.
+        <hr />
+      </h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/391/original/IMG_1886.jpeg?1672096727"
+        alt="Goat with chicken"
+      />
+      <p>
+        "The mission of Green Acres Farm Sanctuary is the prevention of cruelty
+        to, and the commercialization of animals, especially
+        <strong>farmed animals</strong>. We put this mission into action by
+        providing shelter, care and board to abused, abandoned, and unwanted
+        farm animals. We look to <em> inspire </em> change through creating a
+        place where members of the public can have positive interaction with
+        farm animals by providing for their care and the animals can, in turn,
+        educate them about the abusive use of farmed animals."
+        -greenacresfarmsanctuary.org
+      </p>
+      <a
+        href="https://greenacresfarmsanctuary.org/meet-the-animals"
+        target="_blank"
+        class="learn-more"
+      >
+        Meet the animals🐮
+      </a>
+      <button class="volunteer-button">Volunteer Today!</button>
+      <span class="footer">
+        created by:
+        <a href="https://github.com/ShyloBreanne" target="_blank" class="name">
+          Breanne Lyall
+        </a>
+      </span>
+    </div>
+    <script>
+      function volunteer() {
+        let name = prompt("What is your name?");
+        let question = prompt("Do you love animals?");
+        question = question.toLowerCase();
+        question = question.trim();
+        if (question === "yes") {
+          alert(
+            "Awesome, " +
+              name +
+              "! Email greenacresfarmsanctuary@hotmail.com to attend our next Work Party!"
+          );
+        } else {
+          alert("Looks like we won't be seeing you at our next Work Party 🙁");
+        }
+      }
+      let volunteerButton = document.querySelector(".volunteer-button");
+      volunteerButton.addEventListener("click", volunteer);
+    </script>
+  </body>
+</html>
